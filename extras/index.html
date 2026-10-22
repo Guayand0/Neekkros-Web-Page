@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>NEKROS</title>
+  <style>
+    @font-face { font-family: Poppins; src: url("assets/poppins-regular.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: swap; }
+    @font-face { font-family: Poppins; src: url("assets/poppins-medium.woff2") format("woff2"); font-style: normal; font-weight: 500; font-display: swap; }
+    @font-face { font-family: Poppins; src: url("assets/poppins-bold.woff2") format("woff2"); font-style: normal; font-weight: 700; font-display: swap; }
+    * { box-sizing: border-box; }
+    html { background: #000; }
+    body { margin: 0; min-height: 100vh; background: #000; color: #fff; font-family: Poppins, Arial, sans-serif; font-size: 15px; }
+    .icon-definitions { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .page { width: 87%; max-width: 704px; margin: 0 auto; padding: clamp(32px, 6.8vw, 55px) 0 36px; text-align: center; }
+    @media (min-width: 481px) and (max-width: 1000px) { .page { transform: translateX(2.3vw); } }
+    .hero { width: 100%; aspect-ratio: 3 / 2; background: url("assets/nekros-banner.png") center 50% / cover no-repeat; }
+    h1 { margin: 0; font-size: 16px; line-height: 1.4; font-weight: 700; }
+    .description { margin: 8px 0 0; font-size: 15px; line-height: 24px; font-weight: 500; }
+    .quick-links { display: flex; justify-content: center; align-items: center; gap: 17px; margin-top: 12px; }
+    .quick-link { display: grid; width: 30px; height: 30px; color: #fff; place-items: center; }
+    .quick-link svg { width: 100%; height: 100%; fill: currentColor; }
+    .social-buttons { display: grid; gap: 15px; margin-top: 80px; }
+    .social-button { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 64px; border-radius: 999px; background: #fff; color: #000; text-decoration: none; font-size: 15px; line-height: 1; font-weight: 500; }
+    .social-button:focus-visible, .quick-link:focus-visible { outline: 3px solid #73c9ff; outline-offset: 4px; }
+    .button-icon { position: absolute; left: 10px; width: 44px; height: 44px; color: #000; fill: currentColor; }
+    @media (max-width: 480px) {
+      .page { width: 87%; padding-bottom: 40px; }
+      .hero { aspect-ratio: 3 / 2; }
+      .description { font-size: 13px; line-height: 21px; }
+      .social-buttons { margin-top: 62px; gap: 12px; }
+      .social-button { height: 58px; }
+      .button-icon { width: 42px; height: 42px; left: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><symbol id="icon-twitch" viewBox="-1 -2 18 18"><path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z" fill="currentColor"></path><path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z" fill="currentColor"></path></symbol><symbol id="icon-youtube" viewBox="-1 -2 18 18"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" fill="currentColor"></path></symbol><symbol id="icon-instagram" viewBox="-1 -1 18 18"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" fill="currentColor"></path></symbol><symbol id="icon-x" viewBox="0 0 18 18"><path fill="currentColor" d="M2.036 2.008c-.006.01.476.667 1.068 1.458l2.795 3.738 1.72 2.3-.11.125L4.7 12.662A323 323 0 0 0 2 15.601c-.007.015.252.027.624.024l.633-.003.208-.23a3597 3597 0 0 0 4.655-5.035l.075-.086.594.797c.328.437 1.229 1.645 2.002 2.68l1.41 1.88h2.156c1.794 0 2.154-.006 2.142-.039a93 93 0 0 0-1.217-1.645c-.66-.88-1.415-1.892-1.677-2.242-.265-.351-1.041-1.395-1.731-2.314a83 83 0 0 1-1.255-1.702c0-.02 3.646-3.98 4.886-5.303l.354-.378h-.651l-.649.003-.758.821a760 760 0 0 1-2.27 2.454l-1.507 1.63-1.83-2.445-1.83-2.448-2.156-.015a70 70 0 0 0-2.172.003m5.11 2.636L9.564 7.88c.624.832 2.01 2.688 3.081 4.119l1.972 2.641c.018.027-.193.036-.964.036h-.984l-1.951-2.612a3218 3218 0 0 1-6.802-9.1c-.018-.028.184-.037.96-.037h.985z"></path></symbol><symbol id="icon-tiktok" viewBox="0 0 200 200"><path d="M107.867 13.426v118.058c0 13.042-10.575 23.608-23.609 23.608-13.041 0-23.608-10.575-23.608-23.608 0-13.042 10.575-23.608 23.608-23.608V76.392c-30.425 0-55.091 24.667-55.091 55.092s24.666 55.092 55.091 55.092 55.092-24.667 55.092-55.092V76.392l1.658.834a66.6 66.6 0 0 0 29.817 7.041V52.776l-.942-.234c-17.95-4.483-30.541-20.617-30.541-39.116z" fill="currentColor"></path></symbol><symbol id="icon-discord" viewBox="0 0 171.6 171.6"><g transform="translate(-78 -31)" fill="currentColor"><defs fill="currentColor"><path id="a" d="M78 31h172v172H78z" fill="currentColor"></path></defs><clipPath id="b" fill="currentColor"><use xlink:href="#a" width="100%" height="100%" style="overflow:visible" fill="currentColor"></use></clipPath><g style="clip-path:url(#b)" fill="currentColor"><path d="M85.8 0C38.4 0 0 38.4 0 85.8c0 47.3 38.4 85.7 85.8 85.8 47.4 0 85.8-38.4 85.8-85.8S133.2 0 85.8 0zM70.4 43.9q1.65 2.85 3 6c8.4-1.3 16.9-1.3 25.3 0 .8-1.9 1.9-4.2 2.9-6 7.9 1.3 15.5 3.7 22.8 7 12.5 18.4 18.7 39.2 16.5 63.2-8.4 6.3-17.9 11-28 14.1-2.3-3.1-4.3-6.3-6-9.7 3.3-1.2 6.5-2.7 9.5-4.5-.8-.6-1.5-1.2-2.3-1.8-17.7 8.4-38.3 8.4-56 0-.8.6-1.5 1.2-2.3 1.8 3 1.8 6.1 3.3 9.4 4.5-1.7 3.4-3.7 6.6-6 9.7-10.1-3-19.5-7.8-28-14.1-1.9-20.7 2-41.6 16.4-63.1 7.2-3.4 14.9-5.8 22.8-7.1zM67.6 79c-5.5 0-9.9 5.1-9.9 11.2s4.4 11.1 9.9 11.1c5.6 0 9.9-5 10-11.1 0-6.2-4.4-11.2-10-11.2zm36.8 0c-5.5 0-9.9 5.1-9.9 11.2s4.4 11.1 9.9 11.1 9.8-4.9 9.9-11.1S110 79 104.4 79z" transform="translate(78 31)" fill="currentColor"></path></g></g><path d="M-14-14h200v200H-14z" style="fill:none" fill="currentColor"></path></symbol></svg>
+  <main class="page">
+    <div class="hero" role="img" aria-label="Logo de NEKROS sobre un fondo espacial"></div>
+    <h1>NEKROS</h1>
+    <p class="description">Aquí tienes todas mis redes sociales, no olvides seguirme!<br>También esta mi el maldito mejor discord del país<br>El peak del contenido a llegado</p>
+    <nav class="quick-links" aria-label="Redes sociales">
+      <a class="quick-link" href="https://www.twitch.tv/neekkros" target="_blank" rel="noopener noreferrer" aria-label="Twitch"><svg aria-hidden="true"><use href="#icon-twitch"></use></svg></a>
+      <a class="quick-link" href="https://www.youtube.com/@Neekkros" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><svg aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+      <a class="quick-link" href="https://www.instagram.com/neekkros" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+      <a class="quick-link" href="https://www.x.com/neekkros" target="_blank" rel="noopener noreferrer" aria-label="X"><svg aria-hidden="true"><use href="#icon-x"></use></svg></a>
+      <a class="quick-link" href="https://www.tiktok.com/@Neekkros" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg aria-hidden="true"><use href="#icon-tiktok"></use></svg></a>
+      <a class="quick-link" href="https://discord.gg/t6nhzTvaY5" target="_blank" rel="noopener noreferrer" aria-label="Discord"><svg aria-hidden="true"><use href="#icon-discord"></use></svg></a>
+    </nav>
+    <nav class="social-buttons" aria-label="Enlaces a redes sociales">
+      <a class="social-button" href="https://www.twitch.tv/neekkros" target="_blank" rel="noopener noreferrer"><svg class="button-icon" aria-hidden="true"><use href="#icon-twitch"></use></svg><span>Twitch</span></a>
+      <a class="social-button" href="https://www.youtube.com/@Neekkros" target="_blank" rel="noopener noreferrer"><svg class="button-icon" aria-hidden="true"><use href="#icon-youtube"></use></svg><span>Youtube</span></a>
+      <a class="social-button" href="https://www.instagram.com/neekkros" target="_blank" rel="noopener noreferrer"><svg class="button-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg><span>Instagram</span></a>
+      <a class="social-button" href="https://www.x.com/neekkros" target="_blank" rel="noopener noreferrer"><svg class="button-icon" aria-hidden="true"><use href="#icon-x"></use></svg><span>X</span></a>
+      <a class="social-button" href="https://www.tiktok.com/@Neekkros" target="_blank" rel="noopener noreferrer"><svg class="button-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg><span>TikTok</span></a>
+      <a class="social-button" href="https://discord.gg/t6nhzTvaY5" target="_blank" rel="noopener noreferrer"><svg class="button-icon" aria-hidden="true"><use href="#icon-discord"></use></svg><span>Discord</span></a>
+    </nav>
+  </main>
+</body>
+</html>
