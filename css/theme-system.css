@@ -1,0 +1,43 @@
+@media (prefers-color-scheme: light) {
+  :root[data-theme="system"] {
+    color-scheme: light;
+    --background: var(--light-background);
+    --background-glow: var(--light-background-glow);
+    --surface: var(--light-surface);
+    --surface-hover: var(--light-surface-hover);
+    --text: var(--light-text);
+    --muted: var(--light-muted);
+    --accent: var(--light-accent);
+    --line: var(--light-line);
+    --mark-border: var(--light-mark-border);
+    --icon-border: var(--light-icon-border);
+    --icon-background: var(--light-icon-background);
+    --card-background: var(--light-card-background);
+    --card-hover-border: var(--light-card-hover-border);
+    --icon-cutout: var(--light-icon-cutout);
+    --icon-card-cutout: var(--light-icon-card-cutout);
+    --footer-link-hover: var(--light-footer-link-hover);
+  }
+}
+
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+  :root[data-theme="system"] {
+    color-scheme: dark;
+    --background: var(--dark-background);
+    --background-glow: var(--dark-background-glow);
+    --surface: var(--dark-surface);
+    --surface-hover: var(--dark-surface-hover);
+    --text: var(--dark-text);
+    --muted: var(--dark-muted);
+    --accent: var(--dark-accent);
+    --line: var(--dark-line);
+    --mark-border: var(--dark-mark-border);
+    --icon-border: var(--dark-icon-border);
+    --icon-background: var(--dark-icon-background);
+    --card-background: var(--dark-card-background);
+    --card-hover-border: var(--dark-card-hover-border);
+    --icon-cutout: var(--dark-icon-cutout);
+    --icon-card-cutout: var(--dark-icon-card-cutout);
+    --footer-link-hover: var(--dark-footer-link-hover);
+  }
+}

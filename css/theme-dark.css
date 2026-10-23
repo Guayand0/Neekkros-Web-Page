@@ -1,0 +1,38 @@
+:root {
+  --dark-background: #0b0d12;
+  --dark-background-glow: rgba(49, 83, 126, 0.14);
+  --dark-surface: #12151c;
+  --dark-surface-hover: #171b23;
+  --dark-text: #f2f4f8;
+  --dark-muted: #9ba3b1;
+  --dark-accent: #ff4d4d;
+  --dark-line: #292e38;
+  --dark-mark-border: #4b5564;
+  --dark-icon-border: #303743;
+  --dark-icon-background: #1a1f28;
+  --dark-card-background: rgba(18, 21, 28, 0.88);
+  --dark-card-hover-border: #fff;
+  --dark-icon-cutout: #0b0d12;
+  --dark-icon-card-cutout: #1a1f28;
+  --dark-footer-link-hover: #9ca2ae;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: var(--dark-background);
+  --background-glow: var(--dark-background-glow);
+  --surface: var(--dark-surface);
+  --surface-hover: var(--dark-surface-hover);
+  --text: var(--dark-text);
+  --muted: var(--dark-muted);
+  --accent: var(--dark-accent);
+  --line: var(--dark-line);
+  --mark-border: var(--dark-mark-border);
+  --icon-border: var(--dark-icon-border);
+  --icon-background: var(--dark-icon-background);
+  --card-background: var(--dark-card-background);
+  --card-hover-border: var(--dark-card-hover-border);
+  --icon-cutout: var(--dark-icon-cutout);
+  --icon-card-cutout: var(--dark-icon-card-cutout);
+  --footer-link-hover: var(--dark-footer-link-hover);
+}

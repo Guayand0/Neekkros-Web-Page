@@ -1,0 +1,38 @@
+:root {
+  --light-background: #f5f6f8;
+  --light-background-glow: rgba(213, 55, 67, 0.06);
+  --light-surface: #fff;
+  --light-surface-hover: #eceef2;
+  --light-text: #191b21;
+  --light-muted: #68707c;
+  --light-accent: #d92f40;
+  --light-line: #d9dde4;
+  --light-mark-border: #b7bdc7;
+  --light-icon-border: #c9ced7;
+  --light-icon-background: #eaedf1;
+  --light-card-background: rgba(255, 255, 255, 0.92);
+  --light-card-hover-border: #5a606a;
+  --light-icon-cutout: #f5f6f8;
+  --light-icon-card-cutout: #eaedf1;
+  --light-footer-link-hover: #4e5560;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: var(--light-background);
+  --background-glow: var(--light-background-glow);
+  --surface: var(--light-surface);
+  --surface-hover: var(--light-surface-hover);
+  --text: var(--light-text);
+  --muted: var(--light-muted);
+  --accent: var(--light-accent);
+  --line: var(--light-line);
+  --mark-border: var(--light-mark-border);
+  --icon-border: var(--light-icon-border);
+  --icon-background: var(--light-icon-background);
+  --card-background: var(--light-card-background);
+  --card-hover-border: var(--light-card-hover-border);
+  --icon-cutout: var(--light-icon-cutout);
+  --icon-card-cutout: var(--light-icon-card-cutout);
+  --footer-link-hover: var(--light-footer-link-hover);
+}
