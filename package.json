@@ -1,0 +1,8 @@
+{
+  "name": "neekkros-web-page",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "mysql2": "^3.22.5"
+  }
+}

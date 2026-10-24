@@ -1,0 +1,39 @@
+name: Update social counts
+
+on:
+  schedule:
+    - cron: "0 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
+      timezone: "Europe/Madrid"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-social-counts
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch and save social counts
+        run: node api/_update-social-counts.js
+        env:
+          METRIKA_API_TOKEN: ${{ secrets.METRIKA_API_TOKEN }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
